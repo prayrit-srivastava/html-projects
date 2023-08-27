@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+	<script>
+//function for displaying values
+function dis(val)
+{
+document.getElementById("edu").value+=val
+&nbsp;
+
+}
+//function for evaluation
+function solve()
+{
+let x = document.getElementById("edu").value
+let y = eval(x)
+document.getElementById("edu").value = y
+}
+//function for clearing the display
+function clr()
+{
+document.getElementById("edu").value = ""
+}
+</script>
+	<style type="text/css">
+		#edu{
+			width: 170px;
+			height: 40px;
+			background-color: lightgrey;
+			border: solid red 0px;
+			margin-bottom: 10px;
+		}
+		button{
+			width: 40px;
+			height: 40px;
+			padding: 0px;
+			border-spacing: 0px;
+		}
+		#operator{
+			position: absolute;
+			left: 131px;
+			top: 50px;
+			
+		}
+	</style>
+</head>
+<body style="background-color: grey;">
+<div style="position: absolute; left: 300px; top:150px; background-color: grey; ">
+	<div><input type="text" name="display" id ="edu"> </div>
+	
+	<div display = "block">
+		<div>
+			<button value = "1" onclick="dis('1')">1</button>
+			<button value = "2" onclick="dis('2')">2</button>
+			<button value = "3" onclick="dis('3')">3</button>
+		</div>
+		<div>
+			<button value = "4" onclick="dis('4')">4</button>
+			<button value = "5" onclick="dis('5')">5</button>
+			<button value = "6" onclick="dis('6')">6</button>
+		</div>
+		<div>
+			<button value = "7" onclick="dis('7')">7</button>
+			<button value = "8" onclick="dis('8')">8</button>
+			<button value = "9" onclick="dis('9')">9</button>
+		</div>
+			<button value = "0" onclick="dis('0')">0</button>
+	</div>
+
+		<div display = "block" id ="operator">
+			<div>
+				<button onclick="solve()">=</button>
+			</div>
+			<div>
+				<button onclick="clr()">c</button>
+			</div>
+			<div>
+			<button value = "*" onclick="dis('*')">*</button>
+			</div>
+			<div>
+			<button value = "/" onclick="dis('/')">/</button>
+			</div>
+		</div>
+		<div>
+			<div style="position: absolute; left: 44px; top:170px;">
+			<button value = "+" onclick="dis('+')">+</button>
+			</div>
+			<div style="position: absolute;left: 88px; top:170px;">
+			<button value = "-" onclick="dis('-')">-</button>
+			</div>
+			<div>
+			<!--<button>.</button>-->
+			</div>	
+		</div>
+	</div>	
+</body>
+</html>

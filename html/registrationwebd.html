@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>registration</title>
+	<style type="text/css">
+		body{
+			background-color: grey;
+		}
+		#body{
+			width: 300px;
+  			border: 0px solid ;
+  			padding: 50px;
+  			margin: 20px;
+  			margin-left: 5px;
+  			background-color: white;
+			position:absolute;
+			top:200px;
+			left:400px;
+			width: 600px;
+			
+		}
+		#content{
+
+		}
+
+	</style>
+	<script type="text/javascript">
+		function validate(){			
+			var x = document.getElementById("name");
+			var y = document.getElementById('email').value;
+			var atindex = y.indexof('@');
+			var dotindex = y.lastIndexOf('.');
+			if(x.value.length == 0){
+				alert("enter the name");
+				
+			}
+			if(atindex<1||dotindex>=e.length-2||dotindex-atindex<3){
+				alert('enter valid email');
+				
+			}
+		
+		}
+	</script>
+</head>
+<body>
+	<div id="body">
+	<div>
+		<h1>Registration Form</h1>
+	</div>
+	<div id="content">
+		<table>
+			<form>
+			<tr>
+				<td>Name </td><td><input type="text" id= "name" ></td>
+			</tr>
+			<tr>
+				<td>DOB </td><td><INPUT type = "date" ></td>
+			</tr>
+			<tr>
+				<td> City </td><td><select id="city" name="city">
+    					<option value="varanasi">Varanasi</option>
+    					<option value="lucknow">Lucknow</option>
+    					<option value="aligarh">Aliigarh</option>
+    					<option value="ghaziabad">Ghaziabad</option>
+  					   </select>
+				</td>
+			</tr>
+			<tr>
+				<td>Gender</td><td><input type="radio" name="Gender" >M</input><input type="radio" name="Gender">F</input></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="text" id="email"></input></td>
+			</tr>
+			<tr>
+				<td>Adress</td><td><textarea></textarea></td>			
+			</tr>
+		</table>
+	
+	</div>
+	<input type="submit" name="submit" onclick="validate()"></INPUT>
+	<input type="reset" name="reset"></input>
+	</form>
+
+</div>
+</body>
+</html>
